@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/style.css">
     <title>Edit</title>
 </head>
 <body>
-    <h2>Edit</h2>
-    <p>Note id: <%= post.id %></p>
-    <p>Heading <%= post.content %></p>
-    <form method="post" action="/posts/<%= post.id  %>?_method=PATCH">
-        <textarea name="content" rows="10" cols="20"><%= post.content %></textarea>
-        <button>Confirm</button>
-    </form>
+    <h1>Edit</h1>
+    <div class="post">
+        <p style="text-decoration: solid black underline;">Note id: <%= post.id %></p>
+        <form method="post" action="/posts/<%= post.id  %>?_method=PATCH">
+            <div class="edit_content">
+                <textarea name="content" rows="7" cols="70"><%= post.content %></textarea>
+            <button class="btn btn-primary">Confirm</button>
+            </div>
+        </form>
+    </div>
+
+
 </body>
 </html>

@@ -1,22 +1,21 @@
 body{
-    background-color: rgb(195, 195, 127);
+    background-color: #EEEEEE;
 }
 h1{
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: white;
-    text-decoration: solid white underline;
+    color: #393E46;
+    text-decoration: solid #393E46 underline;
 }
 
 .post{
-    background-color: rgb(253, 84, 84);
+    background-color: #00ADB5;
     justify-content: center;
     align-content: center;
     align-items: center;
-    display: flex;
-    flex-direction: column;
     margin: 5px;
     width: 50rem;
+    height: 20rem;
     margin:auto;
     margin-bottom: 10px;
     border-radius: 30px;
@@ -24,4 +23,45 @@ h1{
 
 .user{
     font-family: italic;
+    background-color: #222831;
+    color: white;
+    text-align: center;
+    height: 2rem;
+    font-size: 1.5rem;
+}
+
+.content{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    height: 10rem;
+    margin-top: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: #393E46;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+.achor{
+    text-align: end;
+    z-index: 1;
+    position: relative;
+    top: 2.3rem;
+}
+button{
+    z-index: 2;
+    margin-left: 12px;
+}
+
+p{
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.edit_content{
+    text-align: center;
+
 }
