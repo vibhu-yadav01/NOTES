@@ -1,0 +1,12 @@
+h1{
+    text-align: center;
+    color: yellow;
+}
+
+.post{
+    background-color: rgb(253, 84, 84);
+}
+
+.user{
+    font-family: italic;
+}
