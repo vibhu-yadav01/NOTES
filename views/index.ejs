@@ -12,7 +12,16 @@
         <div class="post">
             <h3 class="user"> <%= post.username %></h3>
             <h4 class="content"> <%= post.content %></h4>
-        </div>
-        <% } %>
+        <br>
+        <a href="http://localhost:8080/posts/<%= post.id %>">Detail</a>&nbsp;
+        <a href="http://localhost:8080/posts/<%= post.id %>/edit">Edit</a>
+        <form method="post" action="/posts/<%= post.id %>?_method=DELETE" >
+            <button>DELETE</button>
+        </form>
+    </div>
+    <% } %>
+        <br>
+        <br>
+        <a href="http://localhost:8080/posts/new">Create New Note</a>
 </body>
 </html>
