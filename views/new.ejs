@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="/style.css">
     <title>Adding page</title>
 </head>
 <body>
+    <span class ="theme">
+        <i class="fa-solid fa-circle-half-stroke">Theme</i>
+    </span>
     <h1>New Note</h1>
     <div class="container">
         <form method="post" action="/posts">
@@ -16,5 +20,32 @@
             <button class="btn btn-primary add">ADD</button>
         </form>
     </div>
+    <script>
+        let count = 1;
+        let bd = document.querySelector("body");
+        let theme = document.querySelector(".theme");
+        let heading = document.querySelector("h1");
+        let posts = document.querySelector(".container");
+        theme.addEventListener("click", function () {
+        count++;
+        console.log(count);
+    
+        // Toggle theme based on count
+        if (count %2== 0) {
+            bd.style.backgroundColor =`#ffbdbf`;
+            heading.style.color =`#ff6b81`;
+            posts.style.backgroundColor= `#f9909f`;
+
+            
+        } else {
+            bd.style.backgroundColor = '#D1F8EF';
+            heading.style.color =`#3674B5`;
+            posts.style.backgroundColor= `#A1E3F9`;
+
+
+        }
+    });
+
+    </script>
 </body>
 </html>
