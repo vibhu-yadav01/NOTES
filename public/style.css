@@ -1,15 +1,15 @@
 body{
-    background-color: #EEEEEE;
+    background-color: #D1F8EF;
 }
 h1{
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #393E46;
+    color: #3674B5;
     text-decoration: solid #393E46 underline;
 }
 
 .post{
-    background-color: #00ADB5;
+    background-color: #A1E3F9;
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -23,7 +23,7 @@ h1{
 
 .user{
     font-family: italic;
-    background-color: #222831;
+    background-color: #578FCA;
     color: white;
     text-align: center;
     height: 2rem;
@@ -54,6 +54,10 @@ a{
     top: 2.3rem; */
 }
 
+.delete{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
 
 p{
     text-align: center;
@@ -69,7 +73,7 @@ p{
     display: flex;
     justify-content: center;
     margin-top: 5rem;
-    background-color: #00ADB5;
+    background-color: #A1E3F9;
     border-radius: 10px;
     width: 75vh;
 
