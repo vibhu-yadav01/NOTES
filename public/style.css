@@ -15,7 +15,7 @@ h1{
     align-items: center;
     margin: 5px;
     width: 50rem;
-    height: 20rem;
+    height: 22rem;
     margin:auto;
     margin-bottom: 10px;
     border-radius: 30px;
@@ -36,7 +36,7 @@ h1{
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
     height: 10rem;
-    margin-top: 15px;
+    margin-top: 1.4rem;
 }
 
 a{
@@ -81,4 +81,28 @@ p{
 .add{
     text-align: center;
     width: 25vh;
+}
+.pop-container {
+    position: relative;
+    display: inline-block;
+}
+
+.hid {
+    display: none;
+    opacity: 0.7;
+    position: absolute;
+    transform: translateX(-10px); /* Move it slightly left initially */
+    transition: opacity 3s ease-in-out, transform 0.3s ease-in-out; /* Smooth effect */
+    border: 1px solid black;
+    font-size: 1rem;
+    width: 4rem;
+    background-color: white;
+    border-radius: 4px;
+    padding: 2px;
+    text-align: center;
+}
+
+.pop-container:hover .hid {
+    display: block;
+    transform: translateX(0); 
 }

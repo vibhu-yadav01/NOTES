@@ -19,18 +19,8 @@ app.use(express.static(path.join(__dirname,"public")));
 let posts = [
     {
         id: uuidv4(),
-        username: "shraddha",
-        content: "hello everyone"
-    },
-    {
-        id: uuidv4(),
-        username: "shena",
-        content: "hello guys"
-    },
-    {
-        id: uuidv4(),
-        username: "shikha",
-        content: "hello budies"
+        username: "DEMO",
+        content: "This is the demo note, To create new note tap on + icon "
     },
 ]
 
