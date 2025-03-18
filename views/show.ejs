@@ -7,11 +7,15 @@
     <title>Details</title>
 </head>
 <body>
-    <h2>Here is your Note in detail</h2>
-    <p> Note id: <%= post.id  %></p>
+    <h1>Here is your Note in detail</h1>
+    <p style="text-decoration: solid black underline;"> Note id: <%= post.id  %></p>
     <div class="post">
-        <h3 class="username"> <%= post.username %></h3>
-        <h4> <%= post.content %></h4>
+        <div class="user" style="position: relative; top: -27px;">
+            <h3> <%= post.username %></h3>
+        </div>
+        <div class="content">
+            <h4> <%= post.content %></h4>
+        </div>
     </div>
 </body>
 </html>
