@@ -50,8 +50,6 @@ a{
 .achor{
     text-align: end;
     z-index: 1;
-    /* position: relative;
-    top: 2.3rem; */
 }
 
 .delete{
@@ -73,14 +71,17 @@ p{
     display: flex;
     justify-content: center;
     margin-top: 5rem;
-    background-color: #A1E3F9;
+    background-color: white;
     border-radius: 10px;
     width: 75vh;
 
 }
+.heading , .content{
+    width: 75vh;
+}
 .add{
     text-align: center;
-    width: 25vh;
+    width: 75vh;
 }
 .pop-container {
     position: relative;
@@ -107,8 +108,8 @@ p{
     transform: translateX(0); 
 }
 .theme{
-    display: flex;
-    font-size: 1rem;
     cursor: pointer;
-    margin-top: 1rem;
+    position: absolute; 
+    top: 10px; 
+    right: 20px;
 }
