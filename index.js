@@ -39,12 +39,17 @@ app.post("/posts", (req, res)=>{
     res.redirect("/posts")
 });
 
-app.get("/posts/:id", (req, res) =>{
-    let {id} = req.params;
+app.get("/posts/:id", (req, res) => {
+    let { id } = req.params;
     let post = posts.find((p) => id === p.id);
-    console.log(post);
-    res.render("show.ejs", {post});
+    
+    if (!post) {
+        return res.status(404).send("Post not found");
+    }
+
+    res.render("show.ejs", { post });
 });
+
 
 app.patch("/posts/:id", (req, res)=>{
     let { id }=  req.params;
