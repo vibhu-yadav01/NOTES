@@ -16,7 +16,7 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname,"public")));
 
 
-let posts = [
+let notes = [
     {
         id: uuidv4(),
         username: "DEMO",
@@ -24,53 +24,53 @@ let posts = [
     },
 ]
 
-app.get("/posts", (req, res)=>{
-    res.render("index.ejs", {posts});
+app.get("/notes", (req, res)=>{
+    res.render("index.ejs", {notes});
 });
 
-app.get("/posts/new", (req, res)=>{
+app.get("/notes/new", (req, res)=>{
     res.render("new.ejs");
 });
 
-app.post("/posts", (req, res)=>{
+app.post("/notes", (req, res)=>{
     let {username, content} = req.body;
     let id = uuidv4();
-    posts.push({id, username, content});
-    res.redirect("/posts")
+    notes.push({id, username, content});
+    res.redirect("/notes")
 });
 
-app.get("/posts/:id", (req, res) => {
+app.get("/notes/:id", (req, res) => {
     let { id } = req.params;
-    let post = posts.find((p) => id === p.id);
+    let note = notes.find((p) => id === p.id);
     
-    if (!post) {
+    if (!note) {
         return res.status(404).send("Post not found");
     }
 
-    res.render("show.ejs", { post });
+    res.render("show.ejs", { note });
 });
 
 
-app.patch("/posts/:id", (req, res)=>{
+app.patch("/notes/:id", (req, res)=>{
     let { id }=  req.params;
     let newContent = req.body.content;
-    let post = posts.find((p) => id == p.id);
-    post.content = newContent;
-    console.log(post);
-    res.redirect("/posts");
+    let note = notes.find((p) => id == p.id);
+    note.content = newContent;
+    console.log(note);
+    res.redirect("/notes");
 
 });
 
-app.get("/posts/:id/edit", (req, res)=>{
+app.get("/notes/:id/edit", (req, res)=>{
     let { id }=  req.params;
-    let post = posts.find((p) => id == p.id);
-    res.render("edit.ejs", { post});
+    let note = notes.find((p) => id == p.id);
+    res.render("edit.ejs", { note});
 })
 
-app.delete("/posts/:id",(req, res)=>{
+app.delete("/notes/:id",(req, res)=>{
     let { id } = req.params;
-    posts = posts.filter((p) => id != p.id);
-    res.redirect("/posts");
+    notes = notes.filter((p) => id != p.id);
+    res.redirect("/notes");
 })
 
 app.listen(port, ()=>{
