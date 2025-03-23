@@ -11,16 +11,16 @@
 <body>
     <h1>Edit</h1>
     
-    <div class="post">
-        <p style="text-decoration: solid black underline;">Note id: <%= post.id %></p>
-        <form method="post" action="/posts/<%= post.id  %>?_method=PATCH">
+    <div class="note">
+        <p style="text-decoration: solid black underline;">Note id: <%= note.id %></p>
+        <form method="post" action="/notes/<%= note.id  %>?_method=PATCH">
             <div class="edit_content">
-                <textarea name="content" rows="7" cols="70"><%= post.content %></textarea>
+                <textarea name="content" rows="7" cols="70"><%= note.content %></textarea>
             <button class="btn btn-primary">Confirm</button>
             </div>
         </form>
         <div class="pop-container">
-            <a href="http://localhost:8080/posts">
+            <a href="http://localhost:8080/notes">
                 <i class="fa-solid fa-arrow-left arrow"></i>
             </a>
             <div class="hid">Back</div>
