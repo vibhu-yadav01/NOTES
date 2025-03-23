@@ -8,20 +8,17 @@
     <title>Details</title>
 </head>
 <body>
-    <span class ="theme">
-        <i class="fa-solid fa-circle-half-stroke">Theme</i>
-    </span>
     <h1>Here is your Note in detail</h1>
-    <p style="text-decoration: solid black underline;"> Note id: <%= post.id  %></p>
-    <div class="post">
+    <p style="text-decoration: solid black underline;"> Note id: <%= note.id  %></p>
+    <div class="note">
         <div class="user" style="position: relative; top: -27px;">
-            <h3> <%= post.username %></h3>
+            <h3> <%= note.username %></h3>
         </div>
         <div class="content">
-            <h4> <%= post.content %></h4>
+            <h4> <%= note.content %></h4>
         </div>
         <div class="pop-container">
-            <a href="http://localhost:8080/posts">
+            <a href="http://localhost:8080/notes">
                 <i class="fa-solid fa-arrow-left arrow"></i>
             </a>
             <div class="hid">Back</div>
