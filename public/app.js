@@ -5,6 +5,15 @@ let heading = document.querySelector("h1");
 let notes = document.querySelectorAll(".note");
 let users = document.querySelectorAll(".user");
 
+// Theme button click event
+theme.addEventListener("click", function () {
+    count++;
+    
+    let newTheme = count % 2 === 0 ? "light" : "dark";
+    localStorage.setItem("theme", newTheme); // Save theme choice
+    applyTheme(newTheme); // Apply the new theme
+});
+
 // Function to apply the theme
 function applyTheme(themeMode) {
     if (themeMode === "light") {
@@ -28,11 +37,3 @@ if (savedTheme) {
     applyTheme("dark"); // Default theme
 }
 
-// Theme button click event
-theme.addEventListener("click", function () {
-    count++;
-    
-    let newTheme = count % 2 === 0 ? "light" : "dark";
-    localStorage.setItem("theme", newTheme); // Save theme choice
-    applyTheme(newTheme); // Apply the new theme
-});
